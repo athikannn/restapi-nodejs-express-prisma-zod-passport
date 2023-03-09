@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `post` ALTER COLUMN `updatedAt` DROP DEFAULT,
+    MODIFY `userId` VARCHAR(191) NOT NULL DEFAULT '';
