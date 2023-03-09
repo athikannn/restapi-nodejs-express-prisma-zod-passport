@@ -10,6 +10,6 @@ router.get('/posts', getAllPosts);
 router.get('/posts/:id', getOnePost);
 router.post('/posts', isLoggedIn, validateResource(z.object({body: PostOptionalDefaultsSchema})), createOnePost);
 router.put('/posts/:id', isLoggedIn, validateResource(z.object({body: PostOptionalDefaultsSchema})), updateOnePost);
-router.delete('/posts', isLoggedIn, deleteOnePost);
+router.delete('/posts/:id', isLoggedIn, deleteOnePost);
 
 export default router;
